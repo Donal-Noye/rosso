@@ -1,17 +1,19 @@
 <template>
-  <div class="filters__mobile" v-if="mobileFilters" :class="{ fixed: filtersActive }">
-    <p class="body-4" @click="toggleFilters">Фильтры</p>
-  </div>
-  <div class="sale grid-with-filters">
-    <SaleFilters 
-      @close="toggleFilters" 
-      :filtersActive="filtersActive" 
-      :mobileFilters="mobileFilters" 
-    />
-    <div class="products" v-if="loader">
-      <AppProductCard :products="products" />
+  <div class="sale">
+    <div class="filters__mobile" v-show="mobileFilters" :class="{ fixed: filtersActive }">
+      <p class="body-4" @click="toggleFilters">Фильтры</p>
     </div>
-    <AppLoader v-else />
+    <div class="grid-with-filters">
+      <SaleFilters 
+        @close="toggleFilters" 
+        :filtersActive="filtersActive" 
+        :mobileFilters="mobileFilters" 
+      />
+      <div class="products" v-if="loader">
+        <AppProductCard :products="products" />
+      </div>
+      <AppLoader v-else />
+    </div>
   </div>
 </template>
 

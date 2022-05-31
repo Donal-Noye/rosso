@@ -4,7 +4,7 @@
       <img :src="require(`@/assets/img/catalog/${card.image}.png`)" alt="">
     </div>
     <div class="catalog-card__content">
-      <a class="catalog-card__title" href="#">{{ card.title }}</a>
+      <router-link class="catalog-card__title" :to="{ name: card.path }">{{ card.title }}</router-link>
       <ul class="catalog-card__list" v-if="card.links">
         <li class="catalog-card__item" v-for="link in card.links" :key="link">
           <a class="catalog-card__link body-1" :href="link.path">{{ link.title }}</a>
@@ -18,11 +18,6 @@
 export default {
   props: {
     cards: Object
-  },
-  setup () {
-    
-
-    return {}
   }
 }
 </script>

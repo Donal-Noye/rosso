@@ -95,6 +95,7 @@ export default {
       {
         id: 8,
         image: 'drawers',
+        path: 'Drawers',
         title: 'Выдвижные ящики',
         links: [
           { title: 'Выдвижные ящики с доводчикоми', path: '#' },

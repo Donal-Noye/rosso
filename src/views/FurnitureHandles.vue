@@ -18,9 +18,8 @@
         <img src="@/assets/img/furniture-handles-2.jpg" alt="">
       </div>
     </div>
-    <div class="filters__mobile" v-if="mobileFilters" :class="{ fixed: filtersActive }">
+    <div class="filters__mobile" v-show="mobileFilters" :class="{ fixed: filtersActive }">
       <p class="body-4" @click="toggleFilters">Фильтры</p>
-
     </div>
     <div class="furniture-handles__content grid-with-filters">
       <FurnitureHandlesFilters 

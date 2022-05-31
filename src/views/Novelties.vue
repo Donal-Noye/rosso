@@ -1,6 +1,6 @@
 <template>
   <div class="novelties">
-    <div class="filters__mobile" v-if="mobileFilters" :class="{ fixed: filtersActive }">
+    <div class="filters__mobile" v-show="mobileFilters" :class="{ fixed: filtersActive }">
       <p class="body-4" @click="toggleFilters">Фильтры</p>
     </div>
     <div class="grid-with-filters">

@@ -30,7 +30,7 @@ const routes = [
     name: 'Furniture Handles',
     component: () => import('../views/FurnitureHandles.vue'),
     meta: {
-      title: 'Дверные ручки'
+      title: 'Мебельные ручки'
     }
   },
   {
@@ -150,7 +150,11 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   linkExactActiveClass: 'active',
-  linkActiveClass: 'active'
+  linkActiveClass: 'active',
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  },
+
 })
 
 router.beforeEach((to, from, next) => {
