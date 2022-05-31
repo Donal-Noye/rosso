@@ -10,7 +10,7 @@
       </div>
     </router-link>
     <div class="pop-cat__item pop-cat__btn">
-      <AppButton text="Все категории" type="secondary md l" icon />
+      <AppButton @click="$router.push({ name: 'Catalog' })" text="Все категории" type="secondary md l" icon />
     </div>
   </div>
 </template>
