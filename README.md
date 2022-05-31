@@ -1,6 +1,8 @@
 # Rosso
 
-# Available Pages
+Сделан с помощью Vue JS
+
+# Доступные страницы
 [Главная](https://rosso-app.web.app)
 
 [Новинки](https://rosso-app.web.app/novelties)
